@@ -9,17 +9,17 @@ def ___(*arguments)
 end
 
 # Create an empty array named categories with using a literal
-categories = ___
-assert_equal categories, []
+categories = categories.new
+assert_equal categories, []z
 
 # Create an empty array named categories using Array's #new method
 categories = ___
 assert_equal categories, []
 
 # Add 3 stories to the categories array. Each time using a different method.
-categories.___("Music")
-categories.___("Weather")
-categories.___("Florida")
+categories.push("Music")
+categories.unshift("Weather")
+categories.add("Florida")
 assert_equal ["Florida", "Music", "Weather"], categories.sort
 
 # Ensure only unique categories get stored
